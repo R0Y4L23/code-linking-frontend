@@ -120,6 +120,7 @@ const Auth = () => {
 
             <div className="flex items-center h-screen w-full">
                 <div className="w-full bg-green-50 rounded shadow-lg p-8 m-4 md:max-w-xl md:mx-auto">
+                    <p className='text-green-500 cursor-pointer' onClick={() => { navigate("/admin") }}>ADMIN</p>
                     <h1 className="w-full text-center text-gray-800 uppercase mb-20 text-2xl  font-semibold">{authState === "Register" ? "Sign Up" : "Sign In"}</h1>
                     <div className="mb-4 md:flex md:flex-wrap md:justify-between">
                         {authState === "Register" && <><div className="flex flex-col mb-4 md:w-1/2">
@@ -150,6 +151,7 @@ const Auth = () => {
                         <button onClick={handleSubmit} className="block bg-green-300 hover:bg-green-600 text-white uppercase text-lg font-semibold mx-auto p-4 rounded">{authState === "Register" ? "Create Account" : "Login"}</button>
                     </div>
                     <p className="block w-full cursor-pointer text-center text-lg text-gray-600 hover:text-gray-400" onClick={() => { authState === "Register" ? setAuthState("Login") : setAuthState("Register"); clearAllFields() }} >{authState === "Register" ? "Already Have An Account?" : "No Account?"}</p>
+
                 </div>
             </div>
         </>
