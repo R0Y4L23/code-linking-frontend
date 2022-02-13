@@ -33,7 +33,7 @@ const Home = () => {
 
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/users',
+            url: 'https://codelinking.herokuapp.com/api/users',
             headers: {
                 'x-auth-token': token
             }

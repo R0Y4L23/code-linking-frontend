@@ -43,7 +43,7 @@ const MainScreen = (props) => {
 
 
     useEffect(() => {
-        socketRef.current = io('http://localhost:5000');
+        socketRef.current = io('https://codelinking.herokuapp.com');
         socketRef.current.emit('bid', id, '30');
 
         socketRef.current.on('receive-changes', (bid, user, name, sec) => {
@@ -66,7 +66,7 @@ const MainScreen = (props) => {
         const token = sessionStorage.getItem('token')
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/users/nominate/' + id,
+            url: 'https://codelinking.herokuapp.com/api/users/nominate/' + id,
             headers: {
                 'x-auth-token': token
             }
@@ -97,7 +97,7 @@ const MainScreen = (props) => {
 
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/users',
+            url: 'https://codelinking.herokuapp.com/api/users',
             headers: {
                 'x-auth-token': token
             }
@@ -119,7 +119,7 @@ const MainScreen = (props) => {
     const getHigestBidderDetails = (uid) => {
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/users/' + uid,
+            url: 'https://codelinking.herokuapp.com/api/users/' + uid,
         };
 
         axios(config)
@@ -195,7 +195,7 @@ const MainScreen = (props) => {
 
             var config = {
                 method: 'put',
-                url: 'http://localhost:5000/api/users/buy/' + details._id,
+                url: 'https://codelinking.herokuapp.com/api/users/buy/' + details._id,
                 headers: {
                     'x-auth-token': token,
                     'Content-Type': 'application/json'

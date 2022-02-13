@@ -52,7 +52,7 @@ const Auth = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/api/users/login',
+            url: 'https://codelinking.herokuapp.com/api/users/login',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -88,7 +88,7 @@ const Auth = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/api/users/register',
+            url: 'https://codelinking.herokuapp.com/api/users/register',
             headers: {
                 'Content-Type': 'application/json'
             },

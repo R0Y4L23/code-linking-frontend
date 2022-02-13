@@ -48,7 +48,7 @@ const AdminAuth = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/api/admin/login',
+            url: 'https://codelinking.herokuapp.com/api/admin/login',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -81,7 +81,7 @@ const AdminAuth = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/api/admin/register',
+            url: 'https://codelinking.herokuapp.com/api/admin/register',
             headers: {
                 'Content-Type': 'application/json'
             },

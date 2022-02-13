@@ -14,7 +14,7 @@ const ProductsScreen = () => {
         const token = sessionStorage.getItem('token')
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/admin/nominate',
+            url: 'https://codelinking.herokuapp.com/api/admin/nominate',
             headers: {
                 'x-auth-token-admin': token
             }

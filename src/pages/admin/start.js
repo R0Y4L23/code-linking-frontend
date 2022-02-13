@@ -14,7 +14,7 @@ const Start = () => {
         const token = sessionStorage.getItem('token')
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/admin/start',
+            url: 'https://codelinking.herokuapp.com/api/admin/start',
             headers: {
                 'x-auth-token-admin': token
             }

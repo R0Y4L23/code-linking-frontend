@@ -21,7 +21,7 @@ const Products = ({ name, price, description, isApproved, isSold, id, image, isA
         });
         var config = {
             method: 'put',
-            url: 'http://localhost:5000/api/admin/nominate/' + id,
+            url: 'https://codelinking.herokuapp.com/api/admin/nominate/' + id,
             headers: {
                 'x-auth-token-admin': token,
                 'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ const Products = ({ name, price, description, isApproved, isSold, id, image, isA
 
         var config = {
             method: 'put',
-            url: 'http://localhost:5000/api/admin/start/' + id,
+            url: 'https://codelinking.herokuapp.com/api/admin/start/' + id,
             headers: {
                 'x-auth-token-admin': token
             }
@@ -76,7 +76,7 @@ const Products = ({ name, price, description, isApproved, isSold, id, image, isA
 
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/users/' + dataOfProduct.userBought,
+            url: 'https://codelinking.herokuapp.com/api/users/' + dataOfProduct.userBought,
         };
 
         axios(config)

@@ -15,7 +15,7 @@ const Active = () => {
         const token = sessionStorage.getItem('token')
         var config = {
             method: 'get',
-            url: 'http://localhost:5000/api/users/nominate',
+            url: 'https://codelinking.herokuapp.com/api/users/nominate',
             headers: {
                 'x-auth-token': token
             }

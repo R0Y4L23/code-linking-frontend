@@ -63,7 +63,7 @@ const Seller = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:5000/api/users/nominate',
+            url: 'https://codelinking.herokuapp.com/api/users/nominate',
             headers: {
                 'x-auth-token': token,
                 'Content-Type': 'application/json'
