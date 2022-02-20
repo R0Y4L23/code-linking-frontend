@@ -1,70 +1,83 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hack-A-Web Problem Statement - 3
 
-## Available Scripts
+Auctioning is one of the most prominent activities in this world, but due to more virtual events, not all auctions
+can occur offline; hence, there is a need to make auctions available virtually, which will be more user-friendly and easier
+to use. 
 
-In the project directory, you can run:
+# Solution 
 
-### `npm start`
+- All user can NOMINATE Items for Auction
+- Admin Manager will approve by providing specified date
+- Admin Manager will start the auction for the day.
+- Buyers can participate in the started auctions
+- The Bidding Mechanism is in RealTime. 
+ * Updating of Bidding Amount at low latency
+ * as, any bid is placed the TIMMER reset's
+ * at the end to TIMMER the higgest BIDDER wins the Auction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Secure System
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- All the Images of the Auction is stored in IPFS-network
+- All the payment transactions are done in ETHEREUM BLOCKCHAIN
+- Once the item is sold the record get's written in the BlockChain 
+ * providing an unalterable selling records.
+ * and safe payment methods by Smart Contract to remove Frauds. 
+    
+# Admin Functionalities
 
-### `npm test`
+- Admin can approve and activate the product for Auction
+- Admin can monitor the products
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+**Client:** React, TailwindCSS, Socket.io Client
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Server:** Node.Js, Express.Js, Socket.io, MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**BlockChain** Solidity, Ethereum, IPFS-network
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Site
+https://ecstatic-curran-043ca0.netlify.app/
 
-### `npm run eject`
+# Video Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+https://user-images.githubusercontent.com/81407181/154105714-0dda3c22-bf7d-4a22-8a1a-c4362dcee30c.mp4
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Demo
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Install packages - npm install.
 
-## Learn More
+**Client**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- cd client
+- Start : npm run Start 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+- Route : '/' - normal user
+- '/admin' - admin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Backend**
 
-### Analyzing the Bundle Size
+- Start : npm run Start
+- Dev Mode : npm run server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Ethereum**
 
-### Making a Progressive Web App
+- cd ethereum
+- npm install
+- node compile.js
+- node deploy.js
+- provide the deployed address in Factory.js address
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+# Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [@Nirmalya-Saha96](https://github.com/Nirmalya-Saha96)
+        * Developed the Ethereum Smart Contract and the Backned
+- [@R0Y4L23](https://github.com/R0Y4L23)
+        * Developed the Frontend
+- [@bhaumikankan](https://github.com/bhaumikankan)
+        * Developed the Ethereum Smart Contract and the Backned
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
